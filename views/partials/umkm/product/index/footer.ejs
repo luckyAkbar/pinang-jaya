@@ -1,0 +1,16 @@
+<!-- Footer ================================================================== -->
+<div  id="footerSection">
+  <div class="container">
+    <div class="row">
+      <% footerItems.forEach((item) => { %>
+        <div class="span2">
+          <h5><%= item.mainLink %></h5>
+          <% item.subLinks.forEach((subLink) => { %>
+            <a href="<%= subLink.href %>"><%= subLink.title %></a>
+          <% }); %>
+        </div>
+      <% }); %>
+      <%- include('./social-media'); %>
+		</div>
+  </div>
+</div><!-- Container End -->

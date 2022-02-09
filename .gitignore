@@ -1,0 +1,11 @@
+node_modules/
+.env
+build/
+frontend-page/
+init.js
+init.ts
+test.js
+test.ts
+*.log
+uploads/
+public_uploads/

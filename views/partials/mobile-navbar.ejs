@@ -1,0 +1,19 @@
+<section class="menus">
+  <ul class="list-unstyled">
+    <% navbarItems.forEach((navbarItem) => { %>
+      <li class="<%= activateMainNavbar.toLowerCase() === navbarItem.name.toLowerCase() ? 'active' : '' %>"><a href="<%= navbarItem.href %>"><%= navbarItem.name %></a></li>
+    <% }) %>
+    <li>
+      <div class="container">
+        <form action="#">
+          <div>
+            <div class="input-icon">
+              <input type="email" name="email" id="email" placeholder="Telusuri halaman" />
+              <i class="fa fa-search"></i>
+            </div>
+          </div>
+        </form>
+      </div>
+    </li>
+  </ul>
+</section>

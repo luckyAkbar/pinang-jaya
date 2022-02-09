@@ -1,0 +1,40 @@
+<section class="global-section agenda pt-4">
+  <div class="container-fluid">
+    <div class="row">
+      <%- include('./side-nav'); %>
+
+      <div class="col-md-10">
+        <button id="btn-sidenav" class="btn btn-primary float-left mr-2" onclick="openNav()"><i class="fas fa-align-justify"></i></button>
+        <h3 class="font-weight-bold mb-3">Agenda</h3>
+        <div class="card">
+          <div class="card-header">
+            <h6 class="font-weight-bold">Agenda Desa <%= villageName %></h6>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <% let i = 0; %>
+
+              <% for (i; i < listAgenda.length / 2; i++) { %>
+                <div class="col-md-6">
+                  <a href="">
+                    <h6 class="card-title font-weight-bolder"><%= listAgenda[i].title %></h6>
+                  </a>
+                  <p class="text-secondary mb-4"><%= listAgenda[i].date %> (Jam <%= listAgenda[i].time %>)</p>
+                </div>
+              <% } %>
+
+              <% for (i; i < listAgenda.length; i++) { %>
+                <div class="col-md-6">
+                  <a href="">
+                    <h6 class="card-title font-weight-bolder"><%= listAgenda[i].title %></h6>
+                  </a>
+                  <p class="text-secondary mb-4"><%= listAgenda[i].date %> (Jam <%= listAgenda[i].time %>)</p>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

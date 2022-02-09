@@ -1,0 +1,24 @@
+<div class="col-md-8">
+  <% let i = 0; %>
+  <% listBerita.forEach((berita) => { %>
+    <div class="card bg-white">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card-body">
+            <a href="/info">
+              <a href="">
+                <h5 class="card-title font-weight-bold"><%= berita.title %></h5>
+              </a>
+            </a>
+            <p><%= berita.content %></p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div id="img-1" class="img-item">
+            <img src="/images/<%= berita.filename %>" alt="" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }); %>
+</div>

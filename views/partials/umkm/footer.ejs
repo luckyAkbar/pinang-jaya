@@ -1,0 +1,53 @@
+<footer>
+  <div class="main-footer">
+     <div class="container">
+        <div class="row">
+           <div class="footer-link-box clearfix">
+              <div class="col-md-6 col-sm-6">
+                 <div class="left-f-box">
+                    <% let i = 0; %>
+                     <% for (i; i < footerLinks.length / 2; i++) { %>
+                        <div class="col-sm-<%= footerLinks[i].subLinks.length %>">
+                           <h2><%= footerLinks[i].mainLink %></h2>
+                           <ul>
+                              <% footerLinks[i].subLinks.forEach((subLink) => { %>
+                              <li><a href="<%= subLink.href %>"><%= subLink.title %></a></li>
+                              <% }); %>
+                           </ul>
+                        </div>
+                     <% } %>
+                 </div>
+              </div>
+              <div class="col-md-6 col-sm-6">
+                 <div class="right-f-box">
+                  <% for (i; i < footerLinks.length; i++) { %>
+                     <div class="col-sm-<%= footerLinks[i].subLinks.length %>">
+                        <h2><%= footerLinks[i].mainLink %></h2>
+                        <ul>
+                           <% footerLinks[i].subLinks.forEach((subLink) => { %>
+                           <li><a href="<%= subLink.href %>"><%= subLink.title %></a></li>
+                           <% }); %>
+                        </ul>
+                     </div>
+                  <% } %>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+  <div class="copyright">
+     <div class="container">
+        <div class="row">
+           <div class="col-md-8">
+              <p><%= villageName %> © <%= copyrightYear %></p>
+           </div>
+           <div class="col-md-4">
+              <ul class="list-inline socials">
+                 <%- include('../village-medsos-list'); %>
+              </ul>
+           </div>
+        </div>
+     </div>
+  </div>
+</footer>
