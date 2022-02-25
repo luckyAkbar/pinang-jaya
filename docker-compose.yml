@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   web-app:
-    build: .
+    images: luckyakbar1029/pinang-jaya
     ports:
       - 3000:3000
     volumes:
